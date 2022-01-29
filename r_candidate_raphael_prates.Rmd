@@ -1,0 +1,49 @@
+---
+title: "R Developer Candidate - Coding Exercise"
+author: "Author: Raphael Prates"
+date: "30/01/2022"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+In this document will be covered these subjects:
+
+* **Main coding exercise proposal**: apply best coding practices and write unit tests;
+* **R by Raphael**: a _glimpse_ of R themes (R functions, R Shiny, R Markdown which I'm using to create this document, Data visualization), mixed with some cultural references to keep a pleasurable reading.
+
+```{r, echo=FALSE,out.width='100%', fig.align='center'}
+knitr::include_graphics('images/tv_simpsons_pyramid.png')
+```
+
+## Coding Exercise
+
+**Challenge:** Somebody wrote a function *total_price()*. It takes the order *dataframe* and *currency* as arguments. Returned value is the sum of all products' prices from the given order, after applying a discount. Discount depends on the currency (for EUR it is 20%, for USD - 25%) and the date (on 27th November 2020 the store has a 50% discount!). Unfortunately, the written function is badly coded. Please refactor it!
+
+Function **total_price()**
+
+```
+total_price <- function(order, currency = "EUR") {
+  discount <- ifelse(currency == "EUR", 0.2, 0.25)
+  discount <- ifelse(Sys.Date() == as.Date("2020-11-27"), 0.5, discount)
+  total <- (order %>% dplyr::select(paste0(“price_”, currency)) * (1 - discount)) %>% sum
+  return(total)
+}
+```
+
+## Coding Exercise - Solution
+
+For each step of this solution are provided references of books and workshops that contributed to the process to gather information to build this document. Let's go to the first subject!
+
+### Unit tests
+
+
+
+
+
