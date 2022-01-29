@@ -21,7 +21,19 @@ total_price <- function(data, currency = "EUR"){
 
   # alert user if currency parameter is not EUR or USD ----
   if (!(currency %in% c("EUR", "USD"))){
-    usethis::ui_stop("{currency} is not a valid currency. It must be EUR or USD.")
+    usethis::ui_stop("{currency} is not a valid currency. It must be EUR or USD!")
+  }
+
+  # alert user if there is any NA in the dataset ----
+  if (sum(is.na(data) != 0) ){
+    usethis::ui_stop("NA value(s) found at dataset. Please check!")
+  }
+
+  # alert user if there is any NA in the dataset ----
+  if (!all("product" %in%  colnames(orderData),
+          "price_EUR" %in%  colnames(orderData),
+          "price_USD" %in%  colnames(orderData))){
+    usethis::ui_stop("One or more required columns are missing from dataset")
   }
 
   discount_date <- "2020-11-27"
