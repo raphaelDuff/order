@@ -19,6 +19,7 @@ presented, the writing of unit tests, and data creation for the package:
 This project is available at: <https://github.com/raphaelDuff/order/>
 
 <img src="images/tv_simpsons.png" width="75%" style="display: block; margin: auto;" />
+<br> <br>
 
 ## Coding Exercise
 
@@ -38,12 +39,14 @@ Function ***total\_price()***:
       return(total)
     }
 
+<br> <br>
+
 ## Coding Exercise - Solution
 
 In order to test the function ***total\_price***, the project was
 created using *devtools* helping the construction of a safe environment
 to develop function documentation, unit tests and to define the required
-packages for the project.
+packages for the project. <br>
 
 ### Writing documentation for total\_price
 
@@ -108,6 +111,7 @@ documentation:
     help(total_price)
 
 <img src="images/total_price_documentation.PNG" width="50%" style="display: block; margin: auto;" />
+<br>
 
 ### Code Refactoring
 
@@ -213,6 +217,6 @@ is a double type of value. The last three tests are validating the
 
 So shall we test:
 <img src="images/test_result.PNG" width="50%" style="display: block; margin: auto;" />
-
-***Thank you for this opportunity and it will be awesome if we could
-work together!***
+<br>  
+<br> ***Thank you for this opportunity and it will be awesome if we
+could work together!***

@@ -21,6 +21,8 @@ This project is available at: https://github.com/raphaelDuff/order/
 ```{r, echo=FALSE,out.width='75%', fig.align='center'}
 knitr::include_graphics('images/tv_simpsons.png')
 ```
+<br>
+<br>
 
 ## Coding Exercise
 
@@ -36,10 +38,13 @@ total_price <- function(order, currency = "EUR") {
   return(total)
 }
 ```
+<br>
+<br>
 
 ## Coding Exercise - Solution
 
 In order to test the function ***total_price***, the project was created using *devtools* helping the construction of a safe environment to develop function documentation, unit tests and to define the required packages for the project.
+<br>
 
 ### Writing documentation for total_price
 
@@ -103,6 +108,7 @@ help(total_price)
 ```{r, echo=FALSE,out.width='50%', fig.align='center'}
 knitr::include_graphics('images/total_price_documentation.PNG')
 ```
+<br>
 
 ### Code Refactoring
 
@@ -202,5 +208,6 @@ So shall we test:
 ```{r, echo=FALSE,out.width='50%', fig.align='center'}
 knitr::include_graphics('images/test_result.PNG')
 ```
-
+<br>  
+<br>
 ***Thank you for this opportunity and it will be awesome if we could work together!***
