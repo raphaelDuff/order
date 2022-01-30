@@ -205,9 +205,11 @@ The third test is used to ensure that the total price returned is a double type 
 The last three tests are validating the *ui_stop* verifications added in the function *total_price.R*.
 
 So shall we test:
+<br>
+
 ```{r, echo=FALSE,out.width='50%', fig.align='center'}
 knitr::include_graphics('images/test_result.PNG')
 ```
-<br>  
 <br>
+  
 ***Thank you for this opportunity and it will be awesome if we could work together!***

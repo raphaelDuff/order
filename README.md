@@ -215,8 +215,10 @@ expected. The third test is used to ensure that the total price returned
 is a double type of value. The last three tests are validating the
 *ui\_stop* verifications added in the function *total\_price.R*.
 
-So shall we test:
+So shall we test: <br>
+
 <img src="images/test_result.PNG" width="50%" style="display: block; margin: auto;" />
-<br>  
-<br> ***Thank you for this opportunity and it will be awesome if we
-could work together!***
+<br>
+
+***Thank you for this opportunity and it will be awesome if we could
+work together!***
