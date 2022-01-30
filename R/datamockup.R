@@ -1,5 +1,5 @@
-NULL
-
+#' orderData
+#'
 #' Order dataframe
 #'
 #' @format A data frame with 3 variables:
@@ -12,6 +12,8 @@ NULL
 #'
 "orderData"
 
+#' orderNaData
+#'
 #' Order dataframe cointaining a NA value
 #'
 #' @format A data frame with 3 variables and one NA value:
@@ -24,6 +26,8 @@ NULL
 #'
 "orderNaData"
 
+#' orderMissingColumnData
+#'
 #' Order dataframe without price_EUR variable
 #'
 #' @format A data frame with 2 variables:

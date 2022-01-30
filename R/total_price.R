@@ -1,13 +1,11 @@
 #' Computes the total price of a order after applying a discount
 #'
-#' The discount depends on the currency (EUR or USD) and the date:
+#' The discount depends on the currency (EUR or USD) and the date.
 #'
-#' On 27th November 2020 the discount is 50%
-#' On the other dates the discount is
-#' 20% for EUR
-#' 25% for USD
+#' On 27th November 2020 the discount is 50%.
+#' On the other dates the discount is 20% for EUR or 25% for USD.
 #'
-#' @param data input order data set
+#' @param data input order dataset
 #' @param currency "EUR" or "USD"
 #'
 #' @return A numeric value of the total price of the order
@@ -21,7 +19,8 @@ total_price <- function(data, currency = "EUR"){
 
   # alert user if currency parameter is not EUR or USD ----
   if (!(currency %in% c("EUR", "USD"))){
-    usethis::ui_stop("{currency} is not a valid currency. It must be EUR or USD!")
+    usethis::ui_stop("{currency} is not a valid currency. It must be EUR or
+                     USD!")
   }
 
   # alert user if there is any NA in the dataset ----
@@ -29,10 +28,11 @@ total_price <- function(data, currency = "EUR"){
     usethis::ui_stop("NA value(s) found at dataset. Please check!")
   }
 
-  # alert user if there is any NA in the dataset ----
-  if (!all("product" %in%  colnames(orderData),
-          "price_EUR" %in%  colnames(orderData),
-          "price_USD" %in%  colnames(orderData))){
+  # alert user if there any of the variables product, price_EUR or price_USD is
+  # missing ----
+  if (!all("product" %in%  colnames(data),
+          "price_EUR" %in%  colnames(data),
+          "price_USD" %in%  colnames(data))){
     usethis::ui_stop("One or more required columns are missing from dataset")
   }
 
